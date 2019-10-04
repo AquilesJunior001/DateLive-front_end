@@ -1,1 +1,20 @@
+<div *ngIf="service.mostrar">
+  <nav class="nav nav-pills nav-justified">
+    <a id="mudar" class="nav-item nav-link" [routerLink]="['/inicial']">
+      <h2>DateLive</h2>
+    </a>
+    <a class="nav-item nav-link" [routerLink]="['/conteudos']">Conteudos</a>
+    <a class="nav-item nav-link" [routerLink]="['/exemplos']">Exemplos</a>
+    <a class="nav-item nav-link" [routerLink]="['/exercicios']">Exercicios sem Pontuação</a>
+    <a class="nav-item nav-link" [routerLink]="['/exerciciosP']">Exercicios com Pontuação</a>
+  </nav>
+</div>
 <router-outlet></router-outlet>
+
+<footer>
+  <div align='Center'>
+    <hr>
+    <small>Desenvolvedor: Aquiles Alves Barros Junior</small>
+    <br><br>
+  </div>
+</footer>

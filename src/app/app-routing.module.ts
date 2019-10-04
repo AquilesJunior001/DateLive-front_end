@@ -11,7 +11,7 @@ import { UsuarioComponent } from './usuario/usuario.component';
 
 
 const routes: Routes = [
-  {path:'', component: LoginComponent},
+  {path: '', component: LoginComponent},
   {path: 'cadastrar', component: CadastroComponent},
   {path: 'inicial', component: InicialComponent},
   {path: 'conteudos', component: ConteudoComponent},
