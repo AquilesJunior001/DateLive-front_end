@@ -7,10 +7,13 @@ import { FuncoesService } from '../funcoes.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
+  usuarios = null;
   constructor(private service: FuncoesService) { }
 
   ngOnInit() {
+    this.service.lista().subscribe(
+      lista => this.usuarios = lista['usuario']
+    );
   }
 
 }

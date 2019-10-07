@@ -1,3 +1,9 @@
-<div *ngFor="let teste of service.lista().usuario">
-    {{ teste.nome }}
+<div *ngIf="usuarios">
+    <div *ngFor="let usuario of usuarios">
+        {{ usuario.id }}
+        {{ usuario.nome }}
+        {{ usuario.senha }}
+        {{ usuario.pontuacao }}
+        {{ usuario.tipo }}
+    </div>
 </div>

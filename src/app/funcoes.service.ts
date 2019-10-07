@@ -11,7 +11,7 @@ export class FuncoesService {
   mostrar = true
 
   lista() {
-    return this.http.get(this.URL)
+    return this.http.get(this.URL);
   }
 
 }
