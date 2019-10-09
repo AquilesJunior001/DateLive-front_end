@@ -10,11 +10,12 @@
   </nav>
 </div>
 <router-outlet></router-outlet>
-
-<footer>
-  <div align='Center'>
-    <hr>
-    <small>Desenvolvedor: Aquiles Alves Barros Junior</small>
-    <br><br>
-  </div>
-</footer>
+<div *ngIf="service.mostrar">
+  <footer>
+    <div align='Center'>
+      <hr>
+      <small>Desenvolvedor: Aquiles Alves Barros Junior</small>
+      <br><br>
+    </div>
+  </footer>
+</div>

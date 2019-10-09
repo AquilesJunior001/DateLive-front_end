@@ -8,12 +8,21 @@ import { FuncoesService } from '../funcoes.service';
 })
 export class LoginComponent implements OnInit {
   usuarios = null;
+  usuario = ''
+  senha = ''
+
   constructor(private service: FuncoesService) { }
 
   ngOnInit() {
     this.service.lista().subscribe(
       lista => this.usuarios = lista['usuario']
     );
+  }
+
+  fazerlogin(){
+    this.service.fazerlogin(this.usuarios,this.usuario,this.senha)
+    this.usuario = ''
+    this.senha = ''
   }
 
 }
