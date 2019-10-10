@@ -31,6 +31,9 @@ export class CadastroComponent implements OnInit {
         this.mensagem = 'Usuario ja cadastrado!'
       }
     } else {
+      this.usuario = ''
+      this.senha = ''
+      this.confirmaSenha = ''
       this.mensagem = 'Senha não são Iguais'
     }
   }
