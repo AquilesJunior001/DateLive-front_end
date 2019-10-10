@@ -57,4 +57,8 @@ export class FuncoesService {
     }
   }
 
+  pontuacao(dados){
+    return dados.sort(function(a, b){return b.pontuacao-a.pontuacao})
+  }
+
 }

@@ -1,1 +1,6 @@
-<div>Em Construção...</div>
+<div *ngIf="service.usuario.tipo == 'Estudante'">
+    Em construção
+</div>
+<div *ngIf="service.usuario.tipo != 'Estudante'">
+    <font color="red">Sem Altorização</font>
+</div>

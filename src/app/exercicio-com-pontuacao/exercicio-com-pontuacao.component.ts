@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FuncoesService } from '../funcoes.service';
 
 @Component({
   selector: 'app-exercicio-com-pontuacao',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExercicioComPontuacaoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: FuncoesService) { }
 
   ngOnInit() {
   }

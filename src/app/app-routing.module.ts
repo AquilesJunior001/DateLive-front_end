@@ -8,6 +8,7 @@ import { ExemploComponent } from './exemplo/exemplo.component';
 import { ExercicioSemPontuacaoComponent } from './exercicio-sem-pontuacao/exercicio-sem-pontuacao.component';
 import { ExercicioComPontuacaoComponent } from './exercicio-com-pontuacao/exercicio-com-pontuacao.component';
 import { UsuarioComponent } from './usuario/usuario.component';
+import { EstatisticaComponent } from './estatistica/estatistica.component';
 
 
 const routes: Routes = [
@@ -18,7 +19,8 @@ const routes: Routes = [
   {path: 'exemplos', component: ExemploComponent},
   {path: 'exercicios', component: ExercicioSemPontuacaoComponent},
   {path: 'exerciciosP', component: ExercicioComPontuacaoComponent},
-  {path: 'usuario', component: UsuarioComponent}
+  {path: 'usuario', component: UsuarioComponent},
+  {path: 'estatisticas', component: EstatisticaComponent}
 ];
 
 @NgModule({

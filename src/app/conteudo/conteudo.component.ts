@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FuncoesService } from '../funcoes.service';
 
 @Component({
   selector: 'app-conteudo',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConteudoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: FuncoesService) { }
 
   ngOnInit() {
   }

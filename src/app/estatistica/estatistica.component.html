@@ -1,1 +1,22 @@
-<p>estatistica works!</p>
+<div *ngIf="service.usuario.tipo == 'Estudante'">
+    <div class="container">
+        <h3 align="Center">Rank de Pontução</h3>
+        <table class="table table-bordered table-sm">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Pontuacao</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let usuario of service.pontuacao(usuarios)">
+                    <td>{{ usuario.nome }}</td>
+                    <td>{{ usuario.pontuacao }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div *ngIf="service.usuario.tipo != 'Estudante'">
+    <font color="red">Sem Altorização</font>
+</div>

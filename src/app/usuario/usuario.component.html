@@ -1,1 +1,7 @@
-<p>usuario works!</p>
+<div *ngIf="service.usuario.tipo == 'Estudante'">
+    {{ service.usuario.nome }}
+    {{ service.usuario.pontuacao }}
+</div>
+<div *ngIf="service.usuario.tipo != 'Estudante'">
+    <font color="red">Sem Altorização</font>
+</div>
