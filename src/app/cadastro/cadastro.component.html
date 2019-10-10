@@ -1,1 +1,24 @@
-<p>cadastro works!</p>
+<div class="container">
+    <h3 align="Center">Cadastro</h3>
+
+    <div class="form-group">
+        <label id="usuario">Usuário</label>
+        <input type="text" class="form-control" id="usuario" placeholder="Usuário" [(ngModel)]="usuario" required>
+    </div>
+    <div class="form-group">
+        <label id="senha">Senha</label>
+        <input type="password" class="form-control" id="senha" placeholder="Senha" [(ngModel)]="senha" required>
+    </div>
+    <div class="form-group">
+        <label id="confirmaSenha">ConfirmaSenha</label>
+        <input type="password" class="form-control" id="confirmaSenha" placeholder="ConfirmaSenha" [(ngModel)]="confirmaSenha" required>
+    </div>
+    <button class="btn btn-outline-success" type="button" name="action" (click)='cadastrar()'>
+        Cadastrar
+    </button>
+    <br>
+    <font color="red">{{ mensagem }}</font>
+    <br><br>
+    <a [routerLink]="['/cadastrar']">Cadastrar</a>
+
+</div>
