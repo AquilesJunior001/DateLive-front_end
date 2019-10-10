@@ -10,6 +10,7 @@ export class LoginComponent implements OnInit {
   usuarios = null;
   usuario = ''
   senha = ''
+  mensagem = ''
 
   constructor(private service: FuncoesService) { }
 
@@ -23,6 +24,9 @@ export class LoginComponent implements OnInit {
     this.service.fazerlogin(this.usuarios,this.usuario,this.senha)
     this.usuario = ''
     this.senha = ''
+    if (this.service.login == false) {
+      this.mensagem = 'Usuário ou Senha Incorretos'
+    }
   }
 
 }

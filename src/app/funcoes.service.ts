@@ -29,9 +29,7 @@ export class FuncoesService {
         }
       }
     }
-    if (this.login == false) {
-      console.log('Usuário ou Senha Incorretos')
-    }
+    
   }
 
 }
