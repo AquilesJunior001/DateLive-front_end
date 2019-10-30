@@ -9,7 +9,8 @@ export class FuncoesService {
 
   constructor(private http: HttpClient, private router: Router) { }
   URL = 'http://127.0.0.1:5000/select';
-  URLpost = 'http://127.0.0.1:5000/insert/'
+  URLpost = 'http://127.0.0.1:5000/insert/';
+  URLupdate = 'http://127.0.0.1:5000/update/';
   mostrar = false
   login = false
   cadastrado = false
@@ -41,7 +42,8 @@ export class FuncoesService {
       }
     }
     if (this.cadastrado == false) {
-      this.http.post(this.URLpost+nome+'/'+senha)
+      let aux = this.URLpost+nome+'/'+senha
+      this.http.post(aux,200)
     .subscribe(
         (val) => {
             console.log("POST call successful value returned in body", 
@@ -57,8 +59,31 @@ export class FuncoesService {
     }
   }
 
+  incrementar(id,pontos){
+    let aux = this.URLupdate+id+'/'+pontos
+    this.http.put(aux,200)
+    .subscribe(
+      (val) => {
+          console.log("POST call successful value returned in body", 
+                      val);
+      },
+      response => {
+          console.log("POST call in error", response);
+      },
+      () => {
+          console.log("The POST observable is now completed.");
+      });
+  }
+
   pontuacao(dados){
     return dados.sort(function(a, b){return b.pontuacao-a.pontuacao})
+  }
+
+  sair(){
+    this.usuario = {'id': 0,'nome':'usuario','senha':'usuario','pontuacao':0,'tipo':'anonimo'}
+    this.mostrar = false
+    this.login = false
+    this.router.navigate(['/'])
   }
 
 }

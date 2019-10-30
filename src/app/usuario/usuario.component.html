@@ -1,6 +1,18 @@
 <div *ngIf="service.usuario.tipo == 'Estudante'">
-    {{ service.usuario.nome }}
-    {{ service.usuario.pontuacao }}
+    <div class="container">
+        <tr>
+            <td rowspan="2" valign="middle"><i class="fa fa-user fa-3x"></i></td>
+            <td></td>
+            <td>{{ service.usuario.nome }}</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>{{ service.usuario.pontuacao }}</td>
+        </tr>
+        <button class="btn btn-outline-danger" type="button" name="action" (click)='service.sair()'>
+            Sair
+        </button>
+    </div>
 </div>
 <div *ngIf="service.usuario.tipo != 'Estudante'">
     <font color="red">Sem Altorização</font>
