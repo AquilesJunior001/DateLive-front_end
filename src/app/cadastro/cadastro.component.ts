@@ -23,6 +23,7 @@ export class CadastroComponent implements OnInit {
 
   cadastrar() {
     if (this.senha == this.confirmaSenha) {
+      this.mensagem = ''
       this.service.cadastrar(this.usuarios,this.usuario,this.senha)
       this.usuario = ''
       this.senha = ''

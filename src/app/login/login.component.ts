@@ -21,6 +21,7 @@ export class LoginComponent implements OnInit {
   }
 
   fazerlogin(){
+    this.mensagem = ''
     this.service.fazerlogin(this.usuarios,this.usuario,this.senha)
     this.usuario = ''
     this.senha = ''
