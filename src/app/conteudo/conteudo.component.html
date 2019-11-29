@@ -1,6 +1,52 @@
 <div *ngIf="service.usuario.tipo == 'Estudante'">
-    Em construção
+    <div class="container">
+        <div>Conteudo retirado do site <a href="https://pt.wikipedia.org/wiki/Estrutura_de_dados">pt.wikipedia.org/wiki/Estrutura_de_dados</a></div>
+        <h1>Estrutura de dados</h1>
+        <div>Uma estrutura de dados (ED), em ciência da computação, é uma coleção tanto de valores (e seus
+            relacionamentos) quanto de operações (sobre os valores e estruturas decorrentes). É uma implementação
+            concreta de um tipo
+            abstrato de dado (TAD) ou um tipo de dado (TD) básico ou primitivo. Assim, o termo ED pode ser considerado
+            sinônimo
+            de TD,
+            se considerado TAD um hipônimo de TD, isto é, se um TAD for um TD.
+            Critérios para escolha e estudo de uma estrutura de dados incluem eficiência para buscas e padrões
+            específicos de acesso,
+            necessidades especiais para manejo de grandes volumes (veja big data), ou a simplicidade de implementação e
+            uso.
+            Ou seja, EDs eficientes são cruciais para a elaboração de algoritmos, diversas linguagens possuem ênfase nas
+            EDs,
+            como evidenciado pela POO, e aplicações distintas usufruem de ou requerem EDs específicas
+            (e.g. um compilador usa uma tabela de dispersão para identificadores e namespaces,
+            enquanto uma Árvore B ou Árvore AA (en) é apropriada para acessos randômicos).
+            Em termos de EDs, os TDs e TADs são definidos indiretamente pelas operações e usos,
+            e propriedades destas operações e usos: e.g. o custo computacional e o espaço que pode representar e ocupa
+            na memória.</div>
+        <h2>Relevância para a Ciência da Computação</h2>
+        <div>Na ciência da computação, uma ED é um modo particular de armazenamento e organização de dados em um
+            computador de modo que possam ser usados eficientemente, facilitando sua busca e modificação.[1][2] EDs e
+            algoritmos são temas fundamentais da ciência da computação, sendo utilizados nas mais diversas áreas do
+            conhecimento e com os mais diferentes propósitos de aplicação. Sabe-se que algoritmos manipulam dados.
+            Quando estes dados estão organizados (dispostos) de forma coerente, caracterizam uma forma, uma estrutura de
+            dados. A organização e os métodos para manipular essa estrutura é que lhe confere singularidade (e vantagens
+            estratégicas, como a minimização do espaço ocupado na memória RAM), além (potencialmente) de tornar o
+            código-fonte mais enxuto e simples.</div>
+        <h2>Conceito-chave: ponteiro</h2>
+        <div>Um ponteiro é um objeto cujo valor aponta para outro valor através de um endereço de memória (e.g. da
+            memória RAM). A forma como os ponteiros são usados em uma ED, seja explicitamente (como em uma lista ligada)
+            ou implicitamente (como em um vetor homogêneo), evidencia suas propriedades, usos e operações.[3][4][5] Por
+            exemplo, em uma estrutura ligada, em que cada elemento possui um (ou mais) ponteiro(s) para outro(s)
+            elemento(s), os valores podem assumir diferentes tipos e estruturas arbitrariamente complexas; já com a
+            omissão dos ponteiros, por exemplo em um vetor (sequência de valores de um mesmo tipo), a representação fica
+            compacta e muitas vezes favorece o processamento massivamente paralelo, como no caso de tensores e outras
+            variantes multidimensionais tão comuns na física, engenharia e matemática aplicada em geral.
+
+            Mesmo quando ponteiros não são usados diretamente, como em linguagens que não utilizam distinção entre
+            ponteiros e outras variáveis (veja o exemplo abaixo), a noção de referenciar a uma outra estrutura de dado
+            arbitrária é usada, noção que é canonicamente abordada pela utilização do ponteiro.</div>
+    </div>
 </div>
 <div *ngIf="service.usuario.tipo != 'Estudante'">
-    <font color="red">Sem Altorização</font>
+    <h1>
+        <font color="red">Sem Altorização</font>
+    </h1>
 </div>
